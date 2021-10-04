@@ -12,9 +12,11 @@ namespace Checkers
 {
     public partial class Checkers : Form
     {
+        static int BOARD_SIZE = 8;
+        private Button[,] board = new Button[BOARD_SIZE ,BOARD_SIZE];
         public Checkers()
         {
-            InitializeComponent();
+            InitializeComponent(board, BOARD_SIZE);
         }
 
         private void Checkers_Load(object sender, EventArgs e)
